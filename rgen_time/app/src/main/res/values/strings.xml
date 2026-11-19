@@ -1,0 +1,146 @@
+<resources>
+    <string name="app_name">RGEN_time</string>
+    <string name="brand_title">RGEN_TIME</string>
+    <string name="brand_subtitle">KRONOS · KYROS TELEMETRY SUITE</string>
+
+    <string name="nav_clock">Reloj</string>
+    <string name="nav_time">Tiempo</string>
+    <string name="nav_media">Media</string>
+    <string name="nav_calendar">Agenda</string>
+    <string name="nav_ai">IA</string>
+    <string name="nav_studio">Ajustes</string>
+
+    <string name="clock_desk_mode">Modo Consola</string>
+    <string name="clock_desk_exit_hint">Toque en cualquier zona para salir del Modo Consola</string>
+    <string name="clock_tap_style_hint">Toque el módulo para alternar COLLAGER4 · PLASMA · HUD-4</string>
+    <string name="clock_seoul_label">SEÚL · KST</string>
+    <string name="clock_world_title">Zonas Horarias Corporativas</string>
+    <string name="clock_live_badge">ACTIVO</string>
+
+    <string name="layer_day">DÍA</string>
+    <string name="layer_hours">HORAS</string>
+    <string name="layer_minutes">MINUTOS</string>
+    <string name="layer_seconds">SEGUNDOS</string>
+    <string name="layer_date_month">FECHA</string>
+
+    <string name="dial_collager4">COLLAGER4</string>
+    <string name="dial_plasma">PLASMA</string>
+    <string name="dial_hud4">HUD-4</string>
+
+    <string name="theme_interstellar_name">Atmosférico</string>
+    <string name="theme_plasma_name">Espectro</string>
+    <string name="theme_cobalt_name">Cobalto 3D</string>
+    <string name="theme_solar_name">Horizonte</string>
+
+    <string name="eye_color_emerald">Esmeralda</string>
+    <string name="eye_color_cyan">Cian</string>
+    <string name="eye_color_magenta">Magenta</string>
+    <string name="eye_color_amber">Ámbar</string>
+
+    <string name="canvas_style_celestial">Núcleo Orbital</string>
+    <string name="canvas_style_neko_hud">Retícula HUD</string>
+    <string name="canvas_style_tensor">Prisma Tensor 3D</string>
+
+    <string name="pupil_slit">Vertical</string>
+    <string name="pupil_round">Circular</string>
+    <string name="pupil_diamond">Rombo</string>
+    <string name="pupil_crosshair">Mira Técnica</string>
+
+    <string name="timer_title">TEMPORIZADOR DE OPERACIONES</string>
+    <string name="timer_presets_title">Intervalos predefinidos</string>
+    <string name="timer_start">Iniciar</string>
+    <string name="timer_pause">Pausar</string>
+    <string name="timer_resume">Reanudar</string>
+    <string name="timer_reset">Reiniciar</string>
+    <string name="timer_add_minute">+1 min</string>
+    <string name="timer_finished_title">Intervalo finalizado</string>
+    <string name="timer_finished_subtitle">Notificación de ciclo completado emitida.</string>
+    <string name="timer_dismiss">Confirmar</string>
+
+    <string name="stopwatch_title">CRONÓMETRO DE PRECISIÓN</string>
+    <string name="stopwatch_lap">Parcial</string>
+    <string name="stopwatch_laps_empty">Pulse Parcial durante la medición para registrar marcas de tiempo.</string>
+    <string name="stopwatch_fastest">Óptima</string>
+    <string name="stopwatch_slowest">Máxima</string>
+
+    <string name="alarms_title">SISTEMA DE ALARMAS</string>
+    <string name="alarms_add">Nueva alarma</string>
+    <string name="alarms_empty">No hay alarmas configuradas. Cree una alarma con tono MP3/audio y programación recurrente.</string>
+    <string name="alarms_pick_audio">Seleccionar audio (.mp3 .wav .ogg .m4a)</string>
+    <string name="alarms_default_tone">Tono del sistema predeterminado</string>
+
+    <string name="studio_title">CONFIGURACIÓN TÉCNICA</string>
+    <string name="studio_gallery_header">Multimedia, Animaciones &amp; Redimensión (.png .jpg .gif .svg .json .lottie .riv)</string>
+    <string name="studio_gallery_bg_title">Capa de Fondo</string>
+    <string name="studio_gallery_panel_title">Collage Dividido 5 Marcos (COLLAGER4 / HUD-4)</string>
+    <string name="studio_gallery_eye_title">Animación / Imagen del Núcleo Central</string>
+    <string name="studio_gallery_pick">Cargar archivo</string>
+    <string name="studio_gallery_clear">Restablecer</string>
+    <string name="studio_gallery_active">Recurso activo</string>
+    <string name="studio_gallery_sliced_ok">Imagen segmentada en 5 paneles continuos</string>
+    <string name="studio_gallery_none">Modo procedural nativo (sin archivo externo)</string>
+    <string name="studio_gallery_opacity">Opacidad</string>
+
+    <string name="studio_eyes_header">Núcleo Óptico &amp; Retícula Central</string>
+    <string name="studio_eyes_style">Geometría del núcleo central</string>
+    <string name="studio_eyes_pupil">Configuración del indicador central</string>
+    <string name="studio_eyes_color">Selector cromático · Codex &amp; HEX</string>
+    <string name="studio_eyes_intensity">Luminancia</string>
+    <string name="studio_eyes_scale">Escala / Redimensión</string>
+    <string name="studio_eyes_offset">Desplazamiento vertical</string>
+    <string name="pref_eyes_title">Activar núcleo central</string>
+    <string name="pref_eyes_desc">Muestra el lienzo vectorial orbital/retícula o la animación personalizada asignada</string>
+    <string name="pref_eyes_whiskers_title">Trazos de retícula lateral</string>
+    <string name="pref_eyes_whiskers_desc">Líneas técnicas de calibración y referencia horizontal</string>
+    <string name="pref_eyes_brows_title">Satélites / arcos orbitales</string>
+    <string name="pref_eyes_brows_desc">Indicadores luminosos periféricos sobre el núcleo</string>
+    <string name="pref_eyes_blink_title">Modulación periódica de fase</string>
+    <string name="pref_eyes_blink_desc">Pulso dinámico sincronizado en tiempo real</string>
+
+    <string name="studio_theme_header">Esquema Cromático · Codex &amp; HEX</string>
+    <string name="studio_dial_header">Arquitectura de Reloj Activa</string>
+    <string name="studio_text_header">Edición de Cuadros de Texto HUD</string>
+    <string name="studio_fx_header">Apartado FX · Partículas, Atmósfera, 3D &amp; Neón EFX</string>
+    <string name="studio_prefs_header">Optimización de Batería &amp; Parámetros Temporales</string>
+    <string name="pref_particles_title">Flujo de Partículas 3D</string>
+    <string name="pref_particles_desc">Vector de partículas ascendentes en tiempo real</string>
+    <string name="pref_starfield_title">Campo Estelar Técnico</string>
+    <string name="pref_starfield_desc">Matriz de puntos luminosos y resplandor lateral</string>
+    <string name="pref_aurora_title">Aurora Atmosférica</string>
+    <string name="pref_aurora_desc">Ondas volumétricas de gradiente profundo</string>
+    <string name="pref_flare_title">Haz Anamórfico</string>
+    <string name="pref_flare_desc">Refracción horizontal estilo óptica anamórfica</string>
+    <string name="pref_gravity_title">Anillos de Horizonte</string>
+    <string name="pref_gravity_desc">Ondas concéntricas de telemetría espacial</string>
+    <string name="pref_scanlines_title">Barrido Escáner HUD</string>
+    <string name="pref_scanlines_desc">Línea de exploración continua de telemetría</string>
+
+    <string name="pref_24h_title">Formato 24 horas</string>
+    <string name="pref_24h_desc">Visualiza horas de 00 a 23 en lugar de AM/PM</string>
+    <string name="pref_seconds_title">Mostrar segundos</string>
+    <string name="pref_seconds_desc">Habilita el contador y segmento de segundos en vivo</string>
+    <string name="pref_beat_title">Pulso de sincronización</string>
+    <string name="pref_beat_desc">Indicador visual sincronizado con cada segundo</string>
+    <string name="pref_seoul_title">Reloj de Seúl (KST) en portada</string>
+    <string name="pref_seoul_desc">Muestra la referencia horaria de Seúl junto a la zona seleccionada</string>
+
+    <string name="calendar_title">AGENDA CORPORATIVA</string>
+    <string name="calendar_add_event">Nuevo registro</string>
+    <string name="calendar_empty_day">Sin eventos registrados para la fecha seleccionada.</string>
+    <string name="calendar_auth_title">Sincronización de Agenda Cloud</string>
+    <string name="calendar_auth_subtitle">Inicie sesión con su cuenta de Google para respaldar y sincronizar sus registros operativos de forma privada.</string>
+    <string name="calendar_sign_in_google">Autenticar con Google</string>
+    <string name="calendar_sign_out">Cerrar sesión</string>
+
+    <string name="ai_title">MÓDULO IA // CONECTOR</string>
+    <string name="ai_mode_edge">Edge Local</string>
+    <string name="ai_mode_api">API Externa</string>
+    <string name="ai_mode_cloud">Gemini Cloud</string>
+    <string name="ai_test_connection">Verificar enlace</string>
+    <string name="ai_send">Enviar</string>
+    <string name="ai_input_hint">Ingrese una instrucción técnica o consulta para el modelo…</string>
+
+    <string name="cd_eye_art">Módulo óptico Eye configurable</string>
+    <string name="cd_desk_mode">Activar modo consola a pantalla completa</string>
+    <string name="cd_exit_desk_mode">Salir del modo consola</string>
+</resources>

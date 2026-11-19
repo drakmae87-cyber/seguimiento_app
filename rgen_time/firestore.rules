@@ -1,0 +1,91 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Global default-deny safety net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() >= 1 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    function isValidCalendarEvent(data) {
+      return data.userId is string &&
+             data.userId == request.auth.uid &&
+             data.title is string &&
+             data.title.size() >= 1 &&
+             data.title.size() <= 100 &&
+             data.dateKey is string &&
+             data.dateKey.size() == 10 &&
+             data.dateKey.matches('^\\d{4}-\\d{2}-\\d{2}$') &&
+             data.timeLabel is string &&
+             data.timeLabel.size() <= 10 &&
+             data.category in [
+               'OPERACIONES', 'REUNION', 'INGENIERIA', 'SISTEMAS', 'AUDITORIA',
+               'PERSONAL', 'TRABAJO', 'KPOP', 'SALUD', 'OTRO'
+             ] &&
+             data.note is string &&
+             data.note.size() <= 300 &&
+             data.completed is bool &&
+             data.colorHex is string &&
+             data.colorHex.size() >= 7 &&
+             data.colorHex.size() <= 9 &&
+             data.colorHex.matches('^#[0-9A-Fa-f]{6,8}$') &&
+             data.createdAt is timestamp &&
+             data.createdAt <= request.time &&
+             data.updatedAt is timestamp &&
+             data.updatedAt <= request.time;
+    }
+
+    match /users/{userId}/calendarEvents/{eventId} {
+      allow get: if isOwner(userId) && isValidId(eventId);
+      allow list: if isOwner(userId);
+
+      allow create: if isOwner(userId) &&
+                       isValidId(eventId) &&
+                       incoming().keys().hasAll([
+                         'userId', 'title', 'dateKey', 'timeLabel', 'category',
+                         'note', 'completed', 'colorHex', 'createdAt', 'updatedAt'
+                       ]) &&
+                       incoming().keys().hasOnly([
+                         'userId', 'title', 'dateKey', 'timeLabel', 'category',
+                         'note', 'completed', 'colorHex', 'createdAt', 'updatedAt'
+                       ]) &&
+                       isValidCalendarEvent(incoming());
+
+      allow update: if isOwner(userId) &&
+                       isValidId(eventId) &&
+                       isValidCalendarEvent(incoming()) &&
+                       incoming().userId == existing().userId &&
+                       incoming().createdAt == existing().createdAt &&
+                       (
+                         incoming().diff(existing()).affectedKeys().hasOnly(['completed', 'updatedAt']) ||
+                         incoming().diff(existing()).affectedKeys().hasOnly([
+                           'title', 'dateKey', 'timeLabel', 'category', 'note',
+                           'completed', 'colorHex', 'updatedAt'
+                         ])
+                       );
+
+      allow delete: if isOwner(userId) && isValidId(eventId);
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "RGEN_time",
+  "description": "kronos_kyros, modern time_out set. pliguins and tools multimodal, integrations for ai and apis ",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

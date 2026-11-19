@@ -1,0 +1,85 @@
+{
+  "entities": {
+    "CalendarEvent": {
+      "title": "CalendarEvent",
+      "description": "Scheduled corporate or operational event in the RGEN_time agenda.",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "Owner Firebase Auth UID."
+        },
+        "title": {
+          "type": "string",
+          "description": "Short event title (1-100 chars)."
+        },
+        "dateKey": {
+          "type": "string",
+          "description": "ISO calendar date YYYY-MM-DD."
+        },
+        "timeLabel": {
+          "type": "string",
+          "description": "Optional HH:mm time label or empty string."
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "OPERACIONES",
+            "REUNION",
+            "INGENIERIA",
+            "SISTEMAS",
+            "AUDITORIA",
+            "PERSONAL",
+            "TRABAJO",
+            "KPOP",
+            "SALUD",
+            "OTRO"
+          ],
+          "description": "Operational category tag."
+        },
+        "note": {
+          "type": "string",
+          "description": "Optional short note (0-300 chars)."
+        },
+        "completed": {
+          "type": "boolean",
+          "description": "Whether the scheduled item is marked completed."
+        },
+        "colorHex": {
+          "type": "string",
+          "description": "Accent color hex string (#RRGGBB)."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server creation timestamp written via FieldValue.serverTimestamp()."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server update timestamp written via FieldValue.serverTimestamp()."
+        }
+      },
+      "required": [
+        "userId",
+        "title",
+        "dateKey",
+        "timeLabel",
+        "category",
+        "note",
+        "completed",
+        "colorHex",
+        "createdAt",
+        "updatedAt"
+      ]
+    }
+  },
+  "firestore": {
+    "/users/{userId}/calendarEvents/{eventId}": {
+      "schema": {
+        "$ref": "#/entities/CalendarEvent"
+      },
+      "description": "User-scoped scheduled calendar events synced across devices."
+    }
+  }
+}
